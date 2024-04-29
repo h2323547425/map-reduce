@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	// "os"
 	// "strconv"
 	// "strings"
@@ -28,6 +29,8 @@ func main() {
 	// 	fmt.Println(err)
 	// 	return
 	// }
+
+	runtime.GOMAXPROCS(2)
 
 	inputs := make([][]string, 0)
 	inputs = append(inputs, fileparser.ParseString("Hello World Hello"))
